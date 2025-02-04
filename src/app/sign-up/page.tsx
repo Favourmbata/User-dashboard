@@ -1,6 +1,6 @@
-import SignInForm from "@/components/sign-in-form"
+import SignUpForm from "@/components/sign-up-form"
 
-export default function SignInPage() {
+export default function SignUpPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
       <div className="w-full max-w-6xl bg-white rounded-3xl shadow-lg">
@@ -9,14 +9,14 @@ export default function SignInPage() {
             <div className="relative w-[280px] h-[560px]">
               <img
                 src="/My password-pana (1) 1 (1).png"
-                alt="Sign in illustration"
+                alt="Sign up illustration"
                 className="w-full h-full object-contain"
               />
             </div>
           </div>
           <div className="flex items-center justify-center p-4">
             <div className="w-full max-w-md space-y-6">
-              <SignInForm />
+              <SignUpForm />
             </div>
           </div>
         </div>
