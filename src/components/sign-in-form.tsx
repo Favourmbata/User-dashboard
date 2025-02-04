@@ -4,7 +4,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { useFormik } from "formik"
 import * as Yup from "yup"
 import { Eye, EyeOff } from "lucide-react"
@@ -13,6 +12,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import axios from "axios"
+import Image from "next/image"
 
 const validationSchema = Yup.object({
   email: Yup.string().email("Invalid email address").required("Email is required"),
@@ -20,7 +20,6 @@ const validationSchema = Yup.object({
 })
 
 export default function SignInForm() {
-  const router = useRouter()
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -106,11 +105,11 @@ export default function SignInForm() {
 
       <div className="grid grid-cols-2 gap-4">
         <Button variant="outline" type="button">
-          <img src="/Group 2.png" alt="Facebook" className="mr-2 h-6 w-6" />
+          <Image src="/Group 2.png" alt="Facebook" className="mr-2 h-6 w-6" />
           Facebook
         </Button>
         <Button variant="outline" type="button">
-          <img src="/Group 3.png" alt="Google" className="mr-2 h-6 w-6" />
+          <Image src="/Group 3.png" alt="Google" className="mr-2 h-6 w-6" />
           Google
         </Button>
       </div>

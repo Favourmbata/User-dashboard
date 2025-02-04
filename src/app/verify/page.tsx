@@ -1,9 +1,6 @@
 
-
-
-
 import VerificationForm from "@/components/verification-form"
-
+import Image from "next/image"
 export default function VerifyPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4 overflow-x-hidden">
@@ -11,7 +8,7 @@ export default function VerifyPage() {
       <div className="grid lg:grid-cols-2 gap-4 p-6">
         <div className="hidden lg:flex items-center justify-center bg-muted/10 rounded-2xl p-6">
           <div className="relative w-[280px]">
-            <img
+            <Image
               src="/Group 6 (1).png"
               alt="Verification illustration"
               className="object-contain"

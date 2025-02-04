@@ -1,5 +1,5 @@
 import SignInForm from "@/components/sign-in-form"
-
+import Image from "next/image"
 export default function SignInPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
@@ -7,7 +7,7 @@ export default function SignInPage() {
         <div className="grid lg:grid-cols-2 gap-4 p-6">
           <div className="hidden lg:flex items-center justify-center bg-muted/10 rounded-2xl p-6">
             <div className="relative w-[280px] h-[560px]">
-              <img
+              <Image
                 src="/My password-pana (1) 1 (1).png"
                 alt="Sign in illustration"
                 className="w-full h-full object-contain"
