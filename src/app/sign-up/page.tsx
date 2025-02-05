@@ -8,7 +8,9 @@ export default function SignUpPage() {
           <div className="hidden lg:flex items-center justify-center bg-muted/10 rounded-2xl p-6">
             <div className="relative w-[280px] h-[560px]">
               <Image
-                src="/My password-pana (1) 1 (1).png"
+                src="/Mobile login-bro 1.png"
+                width={100}
+                height={100}
                 alt="Sign up illustration"
                 className="w-full h-full object-contain"
               />

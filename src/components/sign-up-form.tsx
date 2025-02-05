@@ -56,7 +56,7 @@ export default function SignUpForm() {
   })
 
   return (
-    <form onSubmit={formik.handleSubmit} className="space-y-6">
+    <form onSubmit={formik.handleSubmit} className="space-y-6 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg px-4 h-[600px]">
       <div className="space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">Hello...!</h1>
         <p className="text-sm text-muted-foreground">Create account</p>
@@ -67,7 +67,7 @@ export default function SignUpForm() {
       <div className="space-y-4">
         <div className="space-y-2">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" type="email" placeholder="example@gmail.com" {...formik.getFieldProps("email")} />
+          <Input id="email" className="bg-[#F0EFEF]"  type="email" placeholder="example@gmail.com" {...formik.getFieldProps("email")} />
           {formik.touched.email && formik.errors.email && (
             <p className="text-sm text-destructive">{formik.errors.email}</p>
           )}
@@ -75,7 +75,7 @@ export default function SignUpForm() {
 
         <div className="space-y-2">
           <Label htmlFor="phone">Phone number</Label>
-          <Input id="phone" type="tel" placeholder="+25 111 222 33" {...formik.getFieldProps("phone")} />
+          <Input id="phone" className="bg-[#F0EFEF]"  type="tel" placeholder="+25 111 222 33" {...formik.getFieldProps("phone")} />
           {formik.touched.phone && formik.errors.phone && (
             <p className="text-sm text-destructive">{formik.errors.phone}</p>
           )}
@@ -84,7 +84,7 @@ export default function SignUpForm() {
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
           <div className="relative">
-            <Input id="password" type={showPassword ? "text" : "password"} {...formik.getFieldProps("password")} />
+            <Input id="password" className="bg-[#F0EFEF]" type={showPassword ? "text" : "password"} {...formik.getFieldProps("password")} />
             <Button
               type="button"
               variant="ghost"
@@ -101,7 +101,7 @@ export default function SignUpForm() {
         </div>
       </div>
       <div className="flex justify-center">
-      <Button type="submit" className="w-[40%]  bg-[#1B4679]" disabled={isLoading}>
+      <Button type="submit" className="w-[44%]  bg-[#1B4679]" disabled={isLoading}>
         {isLoading ? "Creating account..." : "Create Account"}
       </Button>
 </div>
@@ -117,15 +117,16 @@ export default function SignUpForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <Button variant="outline" type="button">
-          <Image src="/Group 2.png" alt="Facebook" className="mr-2 h-6 w-6" />
-          Facebook
-        </Button>
-        <Button variant="outline" type="button">
-          <Image src="/Group 3.png" alt="Google" className="mr-2 h-6 w-6" />
-          Google
-        </Button>
+      <div className="grid grid-cols-2 justify-center items-center">
+        <div className="lg:ml-36 ml-10">
+          <Image src="/image 2.png" width={20} height={20} alt="Facebook" className=" h-6 w-6" />
+          <span className="text-sm">Facebook</span>
+          
+        </div>
+        <div>
+          <Image src="/image 1.png" width={20} height={20} alt="Google" className="mr-4 h-6 w-6" />
+          <span className="text-sm">Google</span>
+        </div>
       </div>
     </form>
   )

@@ -6,11 +6,14 @@ export default function SignInPage() {
       <div className="w-full max-w-6xl bg-white rounded-3xl shadow-lg">
         <div className="grid lg:grid-cols-2 gap-4 p-6">
           <div className="hidden lg:flex items-center justify-center bg-muted/10 rounded-2xl p-6">
-            <div className="relative w-[280px] h-[560px]">
+            <div className="relative w-[280px] h-[350px] pt-4">
               <Image
                 src="/My password-pana (1) 1 (1).png"
+                width={1000}
+                height={1000}
                 alt="Sign in illustration"
-                className="w-full h-full object-contain"
+                className=" object-contain"
+                
               />
             </div>
           </div>

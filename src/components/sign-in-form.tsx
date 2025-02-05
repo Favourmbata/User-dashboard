@@ -46,7 +46,7 @@ export default function SignInForm() {
   })
 
   return (
-    <form onSubmit={formik.handleSubmit} className="space-y-6 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg px-4">
+    <form onSubmit={formik.handleSubmit} className="space-y-6 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg px-4 h-[550px]">
       <div className="space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">Welcome back</h1>
         <p className="text-sm text-muted-foreground">Please sign into your account</p>
@@ -103,20 +103,21 @@ export default function SignInForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <Button variant="outline" type="button">
-          <Image src="/Group 2.png" alt="Facebook" className="mr-2 h-6 w-6" />
-          Facebook
-        </Button>
-        <Button variant="outline" type="button">
-          <Image src="/Group 3.png" alt="Google" className="mr-2 h-6 w-6" />
-          Google
-        </Button>
-      </div>
+       <div className="grid grid-cols-2 justify-center items-center">
+              <div className="lg:ml-36 ml-10">
+                <Image src="/image 2.png" width={20} height={20} alt="Facebook" className=" h-6 w-6" />
+                <span className="text-sm">Facebook</span>
+                
+              </div>
+              <div>
+                <Image src="/image 1.png" width={20} height={20} alt="Google" className="mr-4 h-6 w-6" />
+                <span className="text-sm">Google</span>
+              </div>
+            </div>
 
-      <p className="text-center text-sm text-muted-foreground mt-2">
+      <p className="text-center text-sm text-black mt-2">
         New user?{" "}
-        <Link href="/sign-up" className="text-primary hover:underline">
+        <Link href="/sign-up" className="text-[#749bca] hover:underline">
           Sign up
         </Link>
       </p>

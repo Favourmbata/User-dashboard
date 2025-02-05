@@ -14,7 +14,7 @@ export default function DashboardPage() {
           {/* Messages Left Card */}
           <Card className="border-r-2 border-b-2 border-gray-300 ">
             <CardContent className="flex flex-col items-center p-6 space-y-4">
-              <CircularProgress value={200} size={150} />
+              <CircularProgress value = {(200 / 300) * 100 } size={150}/>
               <p className="text-center text-sm text-gray-500">
                 Messages Left: 200<br />Purchased: 300
               </p>
