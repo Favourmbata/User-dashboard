@@ -1,38 +1,54 @@
 "use client"
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
+import { Line, LineChart, ResponsiveContainer } from "recharts"
 
 const data = [
-  { name: "Jan", usage: 30 },
-  { name: "Feb", usage: 45 },
-  { name: "Mar", usage: 28 },
-  { name: "Apr", usage: 52 },
-  { name: "May", usage: 38 },
-  { name: "Jun", usage: 65 },
-  { name: "Jul", usage: 35 },
+  { value: 20 },
+  { value: 85 },
+  { value: 40 },
+  { value: 35 },
+  { value: 45 },
+  { value: 35 },
+  { value: 90 },
+  { value: 30 },
+  { value: 20 },
+  { value: 15 },
+  { value: 10 },
+  { value: 5 },
 ]
 
 export function UsageChart() {
   return (
-    <div className="h-[300px] w-full border-r-2 border-b-2 border-gray-300">
+    <div className="relative h-[200px] w-full">
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Line type="monotone" dataKey="usage" stroke="hsl(var(--primary))" strokeWidth={2} />
+        <LineChart data={data} margin={{ top: 5, right: 5, left: 5, bottom: 25 }}>
+          <Line
+            type="monotone"
+            dataKey="value"
+            stroke="#1B4679"
+            strokeWidth={2}
+            dot={false}
+            isAnimationActive={false}
+          />
         </LineChart>
       </ResponsiveContainer>
+      {/* Three tick marks spaced farther apart near the left side */}
+      <svg className="absolute bottom-0 left-0 w-full" height="15" style={{ pointerEvents: "none" }}>
+        {/* Horizontal line */}
+        <line x1="0" y1="0" x2="100%" y2="0" stroke="#94A3B8" strokeWidth={1} />
+        {/* Three tick marks spaced farther apart */}
+        {[0, 1, 2].map((i) => (
+          <line
+            key={i}
+            x1={`${5 + i * 5}%`}  
+            y1="0"
+            x2={`${5 + i * 5}%`}
+            y2="8"
+            stroke="#94A3B8"
+            strokeWidth={1}
+          />
+        ))}
+      </svg>
     </div>
   )
 }
-

@@ -118,7 +118,7 @@ export default function SignUpForm() {
       </div>
 
       <div className="grid grid-cols-2 justify-center items-center">
-        <div className="lg:ml-36 ml-10">
+        <div className="lg:ml-24 ml-10">
           <Image src="/image 2.png" width={20} height={20} alt="Facebook" className=" h-6 w-6" />
           <span className="text-sm">Facebook</span>
           

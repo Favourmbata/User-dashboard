@@ -1,14 +1,12 @@
 "use client"
 
-export function CircularProgress({
-  value,
-  size = 200,
-  strokeWidth = 20,
-}: {
+interface CircularProgressProps {
   value: number
   size?: number
-  strokeWidth?: number
-}) {
+}
+
+export function CircularProgress({ value, size = 200 }: CircularProgressProps) {
+  const strokeWidth = 12
   const radius = (size - strokeWidth) / 2
   const circumference = radius * 2 * Math.PI
   const offset = circumference - (value / 100) * circumference
@@ -17,7 +15,7 @@ export function CircularProgress({
     <div className="relative" style={{ width: size, height: size }}>
       <svg width={size} height={size}>
         {/* Background circle */}
-        <circle className="stroke-muted ]" fill="none" strokeWidth={strokeWidth} r={radius} cx={size / 2} cy={size / 2} />
+        <circle className="stroke-muted" fill="none" strokeWidth={strokeWidth} r={radius} cx={size / 2} cy={size / 2} />
         {/* Progress circle */}
         <circle
           className="stroke-[#1B4679] transition-all duration-300 ease-in-out"
@@ -33,9 +31,8 @@ export function CircularProgress({
         />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-2xl font-semibold">{Math.round(value)}%</span>
+        <span className="text-2xl font-semibold">{Math.round(value)}</span>
       </div>
     </div>
   )
 }
-

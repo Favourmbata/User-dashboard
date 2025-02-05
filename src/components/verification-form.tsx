@@ -60,7 +60,7 @@ export default function VerificationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg h-svh">
+    <form onSubmit={handleSubmit} className="space-y-5 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg h-[440px]">
       <div className="space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">Verify your email</h1>
         <p className="text-sm text-muted-foreground">Enter the 4-digit code that has been sent to your email</p>
@@ -95,10 +95,10 @@ export default function VerificationForm() {
         </Button>
       </div>
 
-      <p className="text-center text-sm text-muted-foreground">
-        {"Didn't get a code? "}
-        <Button type="button" variant="link" className="p-0 h-auto font-normal" onClick={handleResendCode}>
-          Resend code
+      <p className="text-center text-sm text-black">
+        {"Didn't get a mail? "}
+        <Button type="button" variant="link" className="p-0 h-auto font-normal text-[#1B4679]" onClick={handleResendCode}>
+          Request again
         </Button>
       </p>
     </form>
