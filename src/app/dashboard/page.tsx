@@ -8,11 +8,11 @@ import { CircularProgress } from "@/components/dashboard/circular-progress"
 export default function DashboardPage() {
     return (
         <div className="">
-        <div className="space-y-8 p-3 px-6 w-full max-w-4xl bg-white shadow-lg">
+        <div className="space-y-8 p-3 px-6 w-full max-w-7xl">
         <h1 className="text-xl font-bold">Welcome to your dashboard, Roaotech</h1>
   
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {/* Messages Left Card */}
+     
           <Card className="border-r-2 border-b-2 border-gray-300 ">
             <CardContent className="flex flex-col items-center p-6 space-y-4">
               <CircularProgress value = {(200 / 300) * 100 } size={200}/>
@@ -30,7 +30,7 @@ export default function DashboardPage() {
             <CardContent className="space-y-4">
               <div>
                 <h3 className="text-lg font-semibold">Gold Plan</h3>
-                <p className="text-sm text-gray-500">$40 for 300 SMS</p>
+                <p className="text-sm font-semibold">$40 for 300 SMS</p>
               </div>
               <div className="space-y-6 ">
                 <Button className="w-[60%] bg-[#1B4679] rounded-2xl mt-10 text-white hover:bg-blue-500">Renew Plan</Button>
@@ -39,7 +39,7 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
   
-          {/* Usage Chart */}
+        
           <Card className="lg:col-span-2 border border-gray-200 shadow-lg rounded-lg">
             <CardContent className="p-6">
               <UsageChart />

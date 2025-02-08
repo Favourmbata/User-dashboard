@@ -12,9 +12,9 @@ export default function DashboardLayout({
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
 
   return (
-    <div className="flex min-h-screen px-5 bg-gray-100 shadow-lg rounded-lg">
+    <div className="flex min-h-screen px-5 ">
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
-      <main className="hidden md:flex flex-1 px-4 md:px-6 lg:px-8 bg-white">
+      <main className="hidden md:flex flex-1 px-4 md:px-6 lg:px-8 ">
         
         <div className="w-full p-6 ">{children}</div>
       </main>

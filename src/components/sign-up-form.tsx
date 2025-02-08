@@ -56,7 +56,7 @@ export default function SignUpForm() {
   })
 
   return (
-    <form onSubmit={formik.handleSubmit} className="space-y-6 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg px-4 h-[600px]">
+    <form onSubmit={formik.handleSubmit} className="space-y-6 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg px-4 h-[520px]">
       <div className="space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">Hello...!</h1>
         <p className="text-sm text-muted-foreground">Create account</p>
@@ -101,7 +101,7 @@ export default function SignUpForm() {
         </div>
       </div>
       <div className="flex justify-center">
-      <Button type="submit" className="w-[44%]  bg-[#1B4679]" disabled={isLoading}>
+      <Button type="submit" className="w-[174px]  bg-[#1B4679] rounded-[30px] border-[3px]" disabled={isLoading}>
         {isLoading ? "Creating account..." : "Create Account"}
       </Button>
 </div>
@@ -117,15 +117,15 @@ export default function SignUpForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 justify-center items-center">
-        <div className="lg:ml-24 ml-10">
-          <Image src="/image 2.png" width={20} height={20} alt="Facebook" className=" h-6 w-6" />
-          <span className="text-sm">Facebook</span>
+      <div className="flex justify-center items-center gap-1  *:flex *:flex-col *:items-center ">
+        <div className="">
+          <Image src="/image 2.png" width={30} height={30} alt="Facebook" className="" />
+          <span className="text-[6.5px] font-sm font-mangroove">Facebook</span>
           
         </div>
         <div>
-          <Image src="/image 1.png" width={20} height={20} alt="Google" className="mr-4 h-6 w-6" />
-          <span className="text-sm">Google</span>
+          <Image src="/image 1.png" width={30} height={30} alt="Google" className="" />
+          <span className="text-[6.5px]">Google</span>
         </div>
       </div>
     </form>

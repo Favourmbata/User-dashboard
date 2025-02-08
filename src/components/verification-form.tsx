@@ -60,10 +60,11 @@ export default function VerificationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg h-[440px]">
-      <div className="space-y-2 text-center">
+    <form onSubmit={handleSubmit} className="space-y-5 shadow-md border-r-2 border-b-2  border-gray-300 rounded-lg h-[440px]">
+      <div className="space-y-2 px-4 mt-4">
         <h1 className="text-2xl font-semibold tracking-tight">Verify your email</h1>
-        <p className="text-sm text-muted-foreground">Enter the 4-digit code that has been sent to your email</p>
+        <p className="text-sm text-muted-foreground">An email with a verification code has been sent to your <br/>
+           mail. Enter the four digit code.</p>
       </div>
 
       <div className="flex justify-center gap-3">
@@ -88,19 +89,19 @@ export default function VerificationForm() {
       </div>
 
       {error && <p className="text-sm text-center text-destructive">{error}</p>}
-
-      <div className="flex justify-center">
-        <Button type="submit" className="w-[40%] bg-[#1B4679]" disabled={isLoading}>
-          {isLoading ? "Verifying..." : "Verify"}
-        </Button>
-      </div>
-
       <p className="text-center text-sm text-black">
         {"Didn't get a mail? "}
         <Button type="button" variant="link" className="p-0 h-auto font-normal text-[#1B4679]" onClick={handleResendCode}>
           Request again
         </Button>
       </p>
+      <div className="flex justify-center">
+        <Button type="submit" className="w-[35%] bg-[#1B4679] rounded-[20px]" disabled={isLoading}>
+          {isLoading ? "Verifying..." : "Verify"}
+        </Button>
+      </div>
+
+      
     </form>
   )
 }

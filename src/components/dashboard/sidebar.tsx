@@ -27,17 +27,15 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
       className={`${
         isOpen ? "w-72" : "w-20"
       } transition-all duration-300 ease-in-out bg-white   flex flex-col md:w-1/2 lg:w-1/4 px-7`}>
-      {/* Sidebar Header */}
+    
       <div className="p-4 flex items-center justify-between">
         <h2 className={`text-2xl font-bold ${isOpen ? "" : "hidden"}`}>Roaotech</h2>
-        {/* Sidebar Toggle Button */}
+       
         <button onClick={() => setIsOpen(!isOpen)} className="ml-auto md:hidden">
           {isOpen ? <ChevronLeft /> : <ChevronRight />}
         </button>
       </div>
-
-      {/* Sidebar Navigation Menu */}
-      <nav className="mt-6 h-[200px]">
+      <nav className="mt-6 h-[200px] font-bold text-[12px]">
         {menuItems.map((item) => (
           <Link key={item.href} href={item.href}>
             <span

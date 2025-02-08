@@ -34,7 +34,7 @@ export default function SignInForm() {
       try {
         const response = await axios.post("/api/auth/login", values)
         if (response.data.success) {
-          // Handle successful login
+         
           console.log("Logged in successfully")
         }
       } catch (error) {
@@ -46,14 +46,13 @@ export default function SignInForm() {
   })
 
   return (
-    <form onSubmit={formik.handleSubmit} className="space-y-6 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg px-4 h-[550px]">
+    <form onSubmit={formik.handleSubmit} className="space-y-6 shadow-md border-r-2 border-b-2 border-gray-300 rounded-lg px-4 h-[520px]">
       <div className="space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">Welcome back</h1>
         <p className="text-sm text-muted-foreground">Please sign into your account</p>
       </div>
 
       <div className="space-y-4">
-        {/* Email field */}
         <div className="space-y-2">
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" type="email" className="bg-[#F0EFEF]" placeholder="example@gmail.com" {...formik.getFieldProps("email")} />
@@ -88,7 +87,7 @@ export default function SignInForm() {
         </div>
       </div>
      <div className="flex justify-center">
-     <Button type="submit" className="w-[40%] bg-[#1B4679]" disabled={isLoading}>
+     <Button type="submit" className="w-[107px] bg-[#1B4679] w-[174px]  bg-[#1B4679] " disabled={isLoading}>
         {isLoading ? "Signing in..." : "Login"}
       </Button>
      </div>
@@ -103,15 +102,15 @@ export default function SignInForm() {
         </div>
       </div>
 
-       <div className="grid grid-cols-2 justify-center items-center">
-              <div className="lg:ml-24 ml-10 ">
-                <Image src="/image 2.png" width={20} height={20} alt="Facebook" className=" h-6 w-6" />
-                <span className="text-sm">Facebook</span>
+       <div className="flex justify-center items-center gap-1  *:flex *:flex-col *:items-center">
+              <div className="">
+                <Image src="/image 2.png" width={30} height={30} alt="Facebook" className="" />
+                <span className="text-[6.5px]">Facebook</span>
                 
               </div>
               <div>
-                <Image src="/image 1.png" width={20} height={20} alt="Google" className="mr-4 h-6 w-6" />
-                <span className="text-sm">Google</span>
+                <Image src="/image 1.png" width={30} height={30} alt="Google" className="" />
+                <span className="text-[6.5px]">Google</span>
               </div>
             </div>
 
